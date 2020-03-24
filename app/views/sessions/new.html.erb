@@ -1,0 +1,7 @@
+<p><%= flash[:danger] %></p>
+
+<%= form_tag '/login' do %>
+  Name: <%= text_field_tag :name %>
+  <%= submit_tag "Sign in" %>
+
+<% end %>
