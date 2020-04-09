@@ -1,0 +1,46 @@
+
+<div class="container-fluid mt-4 p-4 bg-light row d-flex justify-content-center flex-wrap">
+
+<div class="card my-4 mx-4 border border-dark" style="width: 16rem;">
+  <div class="card-header ">
+    <span class="text-warning font-weight-bold h3">My Events</span> 
+  </div>
+  <ul class="list-group list-group-flush">
+    <%@events.each do |event|%>
+    <li class="list-group-item text-capitalize">
+      <a href=<%="/show_event?id=#{event.id}"%> class="btn btn-outline-warning"><%=event.description%></a> 
+    </li>
+    <%end%>
+  </ul>
+</div>
+
+<div class="card my-4 mx-4 border border-dark" style="width: 16rem;">
+  <div class="card-header ">
+    <span class="text-warning font-weight-bold h3">Attended Events</span> 
+  </div>
+  <ul class="list-group list-group-flush">
+    <%@attendees.each do |attendee|%>
+    <% if (Event.find(attendee.event_id).event_date<Date.today) %>
+      <li class="list-group-item text-capitalize">
+        <a href=<%="/show_event?id=#{attendee.event_id}" %> class="btn btn-outline-warning"><%=Event.find(attendee.event_id).description%></a> 
+      </li>
+      <% end %>
+    <%end%>
+  </ul>
+</div>
+
+<div class="card my-4 mx-4 border border-dark" style="width: 16rem;">
+  <div class="card-header ">
+    <span class="text-warning font-weight-bold h3">Events to Attend</span> 
+  </div>
+  <ul class="list-group list-group-flush">
+    <%@upcoming_events.each do |event|%>
+      <li class="list-group-item text-capitalize">
+        <a href=<%= "/show_event?id=#{event.id}" %> class="btn btn-outline-warning"><%=event.description%></a> 
+      </li>
+      <% end %>
+  </ul>
+</div>
+
+</div>
+

@@ -1,0 +1,73 @@
+
+<div class="container"><h1 class="text-center">Past Events</h1></div>
+
+<div class="container">
+<div class="row d-flex justify-content-center">
+  <%@past.each do |event|%>
+
+<div class="card m-1 tag-events border border-warning col-lg-3 col-md-5 col-sm-12">
+  <div class="card-body">
+    <h5 class="card-title"><%=event.description%></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><span class="font-weight-bold">Date:</span><%=event.event_date%></h6>
+    <p class="card-text"><span class="font-weight-bold">Location:</span> <%=event.location%></p>
+    <a href=<%="/show_event?id=#{event.id}"%> class="card-link btn btn-warning">Catch The Event</a>
+  </div>
+</div>
+<%end%>
+
+<%(3-(@past.count % 3)).times do |event|%>
+
+<div class="card m-1 tag-events border border-warning col-lg-3 col-md-5 col-sm-12 invisible">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><span class="font-weight-bold">Date:</span></h6>
+    <p class="card-text"><span class="font-weight-bold">Location:</span> </p>
+    <a href= class="card-link btn btn-warning">Catch The Event</a>
+  </div>
+</div>
+<%end%>
+
+
+</div>
+</div>
+
+
+
+
+<div class="container"><h1 class="text-center">Upcoming Events</h1></div>
+
+<div class="container">
+<div class="row d-flex justify-content-center">
+  <%@upcoming.each do |event|%>
+
+<div class="card m-1 tag-events border border-warning col-lg-3 col-md-5 col-sm-12">
+  <div class="card-body">
+    <h5 class="card-title"><%=event.description%></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><span class="font-weight-bold">Date:</span><%=event.event_date%></h6>
+    <p class="card-text"><span class="font-weight-bold">Location:</span> <%=event.location%></p>
+    <div class= "d-flex flex-row">
+    <a href=<%="/show_event?id=#{event.id}"%> class="card-link btn btn-warning mx-1">Show</a>
+    <% if Attendance.where(user_id: current_user.id, event_id: event.id)==[]%>
+    <%= button_to('Attend', "/attendance?id=#{event.id}",  class: "btn btn-primary mx-1")%>
+    <% end%>
+    </div>
+    
+  </div>
+</div>
+<%end%>
+
+<%(3-(@past.count % 3)).times do |event|%>
+
+<div class="card m-1 tag-events border border-warning col-lg-3 col-md-5 col-sm-12 invisible">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><span class="font-weight-bold">Date:</span></h6>
+    <p class="card-text"><span class="font-weight-bold">Location:</span> </p>
+    <a href= class="card-link btn btn-warning">Catch The Event</a>
+  </div>
+</div>
+<%end%>
+
+</div>
+</div>
+
