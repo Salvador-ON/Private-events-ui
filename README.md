@@ -2,7 +2,10 @@
 
 Seventh Ruby on Rails Microverse Project By Salvador Olvera implemented with Bootstrap
 
-![screenshot](./screenshot.png)
+![screenshot](/media/events3.png)
+![screenshot](/media/events2.png)
+![screenshot](/media/events1.png)
+
 
 
 # What it does
@@ -39,7 +42,7 @@ Seventh Ruby on Rails Microverse Project By Salvador Olvera implemented with Boo
 - Twitter: [@Salvador Olvera_ON](https://twitter.com/Salvador_ON) 
 
 
-## � Contributing
+## Contributing
 
 This is a project for educational purposes only. We are not accepting contributions.
 
