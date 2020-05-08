@@ -17,9 +17,9 @@ Ruby on Rails App. Where users can create events and send invitations to parties
 - In the front-end, we can create new users, login, and display the events of the user, and the previous and upcoming events.
 - Using through and source to get the events attended by the user.
 
-## Test-driven development Rspec and Capybara
+## Test-driven development RSpec and Capybara
 
-The code includes unit testing using respec. To start the test run the next line in your terminal:
+The code includes unit testing using RSpec. To start the test run the next line in your terminal:
 
 ```
 bundle exec rspec
@@ -28,15 +28,13 @@ bundle exec rspec
 
 # How to run this project
 
-- Install ruby
-- Install ruby on rails
-- Install bundle
-- Run "bundle install" inside folder
-- Run "rails server" inside folder
+- Install ruby.
+- Install ruby on rails.
+- Install bundle.
+- Run "bundle install" inside folder.
+- Run "rails server" inside folder.
 - Go to http://127.0.0.1:3000/
 
-
-#### and deployed to GitHub
 
 ## Author
 
