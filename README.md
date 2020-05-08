@@ -1,7 +1,6 @@
-# Private Events project
+# Private Events 
 
-
-Seventh Ruby on Rails Microverse Project By Salvador Olvera &amp; Oscar Russi implemented with Bootstrap
+Ruby on Rails App. Where users can create events and send invitations to parties.
 
 ![screenshot](/media/events3.png)
 ![screenshot](/media/events2.png)
@@ -11,16 +10,20 @@ Seventh Ruby on Rails Microverse Project By Salvador Olvera &amp; Oscar Russi im
 
 # What it does
 
-- It has 3 models: User , Attendance, Event
-- The User has 2 attributes: name, email
-- The Attendance has 2 attributes: user_id, event_id
-- The Event has 2 attributes: description, location, event_date, creator_id
+- It has 3 models: User, Attendance, Event.
+- The User has 2 attributes: name, email.
+- The Attendance has 2 attributes: user_id, event_id.
+- The Event has 2 attributes: description, location, event_date, creator_id.
+- In the front-end, we can create new users, login, and display the events of the user, and the previous and upcoming events.
+- Using through and source to get the events attended by the user.
 
-- In the front-end we can create new users, log in, and display the events of the user, and thre previous and upcoming events 
+## Test-driven development Rspec and Capybara
 
-- We add the validation test using Rspec for unit test and Capibara for integrattion test
+The code includes unit testing using respec. To start the test run the next line in your terminal:
 
-- Using through and source to get the events attendend by the user
+```
+bundle exec rspec
+```
 
 
 # How to run this project
