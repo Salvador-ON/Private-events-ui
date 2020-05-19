@@ -28,8 +28,8 @@ bundle exec rspec
 
 # How to run this project
 
-- Install ruby.
-- Install ruby on rails.
+- Install Ruby.
+- Install Ruby on Rails.
 - Install bundle.
 - Run "bundle install" inside folder.
 - Run "rails server" inside folder.
